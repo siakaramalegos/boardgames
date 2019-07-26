@@ -47,7 +47,7 @@ const games = [
   {
     name: "Game of Thrones (Base, Mother of Dragons)",
     level: "🧠🤯",
-    players: [false, false, true, true, true, true, true, false],
+    players: [false, false, true, true, true, true, true, false, false],
   },
   {
     name: "Splendor",
