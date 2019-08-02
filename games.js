@@ -136,26 +136,48 @@ const games = [
   },
 ]
 
-document.addEventListener('DOMContentLoaded', function(){
-  const tableBody = document.getElementById('table-body')
-  for ( game of games) {
-    const row = document.createElement('tr')
+function renderRow(game, tableBody) {
+  const row = document.createElement('tr')
 
-    const nameNode =  document.createElement('td')
-    const levelNode =  document.createElement('td')
+  const nameNode =  document.createElement('td')
+  const levelNode =  document.createElement('td')
 
-    nameNode.innerHTML = game.name
-    levelNode.innerHTML = game.level
+  nameNode.innerHTML = game.name
+  levelNode.innerHTML = game.level
 
-    row.append(nameNode)
-    row.append(levelNode)
+  row.append(nameNode)
+  row.append(levelNode)
 
-    for (player of game.players) {
-      const playerNode = document.createElement('td')
-      playerNode.innerHTML = player ? "x" : ""
-      row.append(playerNode)
-    }
-
-    tableBody.append(row)
+  for (player of game.players) {
+    const playerNode = document.createElement('td')
+    playerNode.innerHTML = player ? "x" : ""
+    row.append(playerNode)
   }
+
+  tableBody.append(row)
+}
+
+function renderTable(numPlayers) {
+  const tableBody = document.getElementById('table-body')
+  tableBody.innerHTML = ""
+
+  for ( game of games) {
+    if (!!numPlayers) {
+      if (game.players[numPlayers - 1]) {
+        renderRow(game, tableBody)
+      }
+    } else {
+      renderRow(game, tableBody)
+    }
+  }
+}
+
+function selectPlayers(event) {
+  renderTable(parseInt(event.target.value, 10))
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  renderTable()
+  const select = document.getElementById('num-players')
+  select.addEventListener('change', selectPlayers)
 })
