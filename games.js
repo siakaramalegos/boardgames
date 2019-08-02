@@ -50,6 +50,11 @@ const games = [
     players: [false, false, true, true, true, true, true, false, false],
   },
   {
+    name: "Dice Forge (Base, Rebellion)",
+    level: "🧠",
+    players: [false, true, true, true, false, false, false, false, false],
+  },
+  {
     name: "Splendor",
     level: "🧠",
     players: [false, true, true, true, false, false, false, false, false],
