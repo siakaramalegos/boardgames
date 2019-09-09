@@ -1,6 +1,6 @@
 const games = [
   {
-    name: "Terraforming Mars (Base, Prelude, Hellas & Elysium",
+    name: "Terraforming Mars (Base, Prelude, Hellas & Elysium)",
     level: "🧠🤯",
     players: [true, true, true, true, true, false, false, false, false],
   },
