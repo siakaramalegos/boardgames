@@ -1,6 +1,6 @@
 const games = [
   {
-    name: "Terraforming Mars",
+    name: "Terraforming Mars (Base, Prelude, Hellas & Elysium",
     level: "🧠🤯",
     players: [true, true, true, true, true, false, false, false, false],
   },
@@ -61,11 +61,6 @@ const games = [
   },
   {
     name: "Azul",
-    level: "🧠",
-    players: [false, true, true, true, false, false, false, false, false],
-  },
-  {
-    name: "Photosynthesis",
     level: "🧠",
     players: [false, true, true, true, false, false, false, false, false],
   },
