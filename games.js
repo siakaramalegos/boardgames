@@ -110,6 +110,11 @@ const games = [
     players: [false, true, true, true, true, true, false, false, false],
   },
   {
+    name: "On a Scale of One to T-Rex",
+    level: "🎉",
+    players: [false, true, true, true, true, true, true, true, false],
+  },
+  {
     name: "Codenames (best with 4+)",
     level: "🎉👩‍👩‍👦‍👦",
     players: [false, true, true, true, true, true, true, true, false],
@@ -131,23 +136,40 @@ const games = [
   },
 ]
 
+function getMaxPlayers(playersArray) {
+  let index = 8
+  let notAtMax = true
+  while(index > 0 && notAtMax) {
+    if (playersArray[index]) {
+      notAtMax = false
+    } else {
+      index = index - 1
+    }
+  }
+  return index === 8 ? '9+' : index + 1
+}
+
+function playersText(playersArray) {
+  const min = playersArray.findIndex(e => e) + 1
+  const max = getMaxPlayers(playersArray)
+  const phrase = min === max ? min : `${min} - ${max}`
+  return `${phrase} players`
+}
+
 function renderRow(game, tableBody) {
   const row = document.createElement('tr')
 
   const nameNode =  document.createElement('td')
   const levelNode =  document.createElement('td')
+  const playerNode =  document.createElement('td')
 
   nameNode.innerHTML = game.name
   levelNode.innerHTML = game.level
+  playerNode.innerHTML = playersText(game.players)
 
   row.append(nameNode)
   row.append(levelNode)
-
-  for (player of game.players) {
-    const playerNode = document.createElement('td')
-    playerNode.innerHTML = player ? "x" : ""
-    row.append(playerNode)
-  }
+  row.append(playerNode)
 
   tableBody.append(row)
 }
