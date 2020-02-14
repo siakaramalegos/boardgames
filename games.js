@@ -5,14 +5,9 @@ const games = [
     players: [true, true, true, true, true, false, false, false, false],
   },
   {
-    name: "Wingspan",
+    name: "Wingspan (Base, European)",
     level: "🧠🤯",
     players: [true, true, true, true, true, false, false, false, false],
-  },
-  {
-    name: "Rebellion",
-    level: "🧠🤯👩‍👩‍👦‍👦",
-    players: [false, true, false, false, false, false, false, false, false],
   },
   {
     name: "7 Wonders Duel",
@@ -25,7 +20,7 @@ const games = [
     players: [false, true, true, true, false, false, false, false, false],
   },
   {
-    name: "Innovation (Base, Artifacts, Echoes)",
+    name: "Innovation (Base and all expansions)",
     level: "🧠🤯",
     players: [false, true, true, true, false, false, false, false, false],
   },
@@ -35,9 +30,9 @@ const games = [
     players: [false, true, true, true, true, true, true, false, false],
   },
   {
-    name: "7 Wonders",
+    name: "7 Wonders (Base, Cities)",
     level: "🧠🤯",
-    players: [false, true, true, true, true, true, true, false, false],
+    players: [false, true, true, true, true, true, true, true, false],
   },
   {
     name: "Revolution (Base, Anarchy)",
@@ -48,6 +43,11 @@ const games = [
     name: "Game of Thrones (Base, Mother of Dragons)",
     level: "🧠🤯",
     players: [false, false, true, true, true, true, true, false, false],
+  },
+  {
+    name: "Ticket to Ride Europe",
+    level: "🧠",
+    players: [false, true, true, true, true, false, false, false, false],
   },
   {
     name: "Dice Forge (Base, Rebellion)",
@@ -75,9 +75,9 @@ const games = [
     players: [false, true, true, true, true, false, false, false, false],
   },
   {
-    name: "Avalon (up to 10)",
-    level: "🧠",
-    players: [false, false, false, false, true, true, true, true, true],
+    name: "Monty Python Fluxx",
+    level: "🎉",
+    players: [false, true, true, true, true, true, false, false, false],
   },
   {
     name: "Scrabble",
