@@ -5,7 +5,7 @@ const games = [
     players: [true, true, true, true, true, false, false, false, false],
   },
   {
-    name: "Wingspan (Base, European)",
+    name: "Wingspan (Base, European, Oceania)",
     level: "🧠🤯",
     players: [true, true, true, true, true, false, false, false, false],
   },
