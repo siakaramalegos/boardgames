@@ -1,6 +1,6 @@
 const games = [
   {
-    name: "Terraforming Mars (Base, Prelude, Hellas & Elysium)",
+    name: "Terraforming Mars (Base, Prelude, Hellas & Elysium, Colonies)",
     level: "🧠🤯",
     players: [true, true, true, true, true, false, false, false, false],
   },
@@ -43,6 +43,16 @@ const games = [
     name: "Game of Thrones (Base, Mother of Dragons)",
     level: "🧠🤯",
     players: [false, false, true, true, true, true, true, false, false],
+  },
+  {
+    name: "Carcasonne Big Box (11 expansions)",
+    level: "🧠🤯",
+    players: [false, true, true, true, true, true, false, false, false],
+  },
+  {
+    name: "Welcome To",
+    level: "🧠",
+    players: [true, true, true, true, true, true, true, true, true],
   },
   {
     name: "Ticket to Ride Europe",
